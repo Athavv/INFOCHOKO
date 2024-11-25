@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Chocolat</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<header>
+    <nav class="navbar bg-brown pb-4">
+        <div class="container-fluid d-flex justify-content-end">
+            <div class="menu-icon" id="menuIcon">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <div id="overlay" class="d-none position-fixed top-0 start-0 w-100 h-100 bg-dark bg-opacity-75 d-flex justify-content-center align-items-center z-3">
+        <div class="container text-center">
+            <div class="row g-3">
+                <div class="col-6">
+                    <div class="chocolate-card">
+                        <img src="./ressources/carre-chocolat.png" alt="Chocolat" class="img-fluid">
+                        <div class="overlay-text">La relation des gens avec le chocolat</div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="chocolate-card">
+                        <img src="./ressources/carre-chocolat.png" alt="Chocolat" class="img-fluid">
+                        <div class="overlay-text">Comment faire du chocolat</div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="chocolate-card">
+                        <img src="./ressources/carre-chocolat.png" alt="Chocolat" class="img-fluid">
+                        <div class="overlay-text top-50">Le défilé de mode</div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="chocolate-card">
+                        <img src="./ressources/carre-chocolat.png" alt="Chocolat" class="img-fluid">
+                        <div class="overlay-text">Portrait Maxime</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<body>
+    <div class="container-fluid py-4">
+        <div class="row justify-content-center">
+            <div class="col-md-11">
+                <div class="card p-4 shadow">
+                    <div class="row g-3">
+                        <div class="col-md-8">
+                            <h2 class="fw-bold mt-3 text-white display-5 ms-4 mb-4">
+                                COMMENT FAIRE DU CHOCOLAT ?
+                            </h2>
+                            <p class="text-white fs-5 overflow-auto ms-4" style="text-align:justify">
+                                On aurait pu se demander ce qu’il faisait ici, avec ses lunettes discrètes et son sourire chaleureux. En retrait, peu avenant envers les différents clients du salon, qui aurait cru que Maxime Elegbede était un grand passionné et connaisseur de chocolat ?
+                            </p>
+                        </div>
+
+                        <div class="col-md-4 mt-5 text-center">
+                            <img src="./ressources/maxime-elegbede.jpeg" alt="Maxime Elegbede" class="img-fluid rounded shadow" style="height: 70%; width: 70%;">
+                        </div>
+                        
+                        <!-- Lecteur Audio -->
+                        <div class="audio-container w-100 rounded shadow p-3 text-white">
+                            <!-- Barre de progression -->
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <span id="currentTime">0:00</span>
+                                <input type="range" id="progressBar" class="form-range" min="0" value="0" max="100">
+                                <span id="duration">0:00</span>
+                            </div>
+                            <!-- Contenu principal -->
+                            <div class="d-flex align-items-center justify-content-between">
+                                <!-- Section gauche -->
+                                <div class="d-flex align-items-center">
+                                    <img src="./ressources/maxime-elegbede.jpeg" alt="Maxime Elegbede" class="img-fluid rounded me-3" style="width: 80px; height: 80px;">
+                                    <div>
+                                        <h5 class="mb-1">COMMENT FAIRE DU CHOCOLAT</h5>
+                                        <p class="mb-0">Le chocolat, une passion</p>
+                                    </div>
+                                </div>
+                                <!-- Section centrale -->
+                                <div class="d-flex align-items-center">
+                                    <button class="btn btn-secondary me-2" id="back10">
+                                        <i class="bi bi-skip-backward-fill"></i>
+                                    </button>
+                                    <button class="btn btn-secondary me-2" id="playPause">
+                                        <i class="bi bi-play-fill"></i>
+                                    </button>
+                                    <button class="btn btn-secondary" id="forward10">
+                                        <i class="bi bi-skip-forward-fill"></i>
+                                    </button>
+                                </div>
+                                <!-- Section droite -->
+                                <div class="d-flex align-items-center">
+                                    <div class="me-3">
+                                        <label for="speedControl" class="text-white me-2">
+                                            <i class="bi bi-speedometer2"></i>
+                                        </label>
+                                        <select id="speedControl" class="form-select d-inline-block w-auto">
+                                            <option value="0.5">0.5x</option>
+                                            <option value="1" selected>1x</option>
+                                            <option value="1.5">1.5x</option>
+                                            <option value="2">2x</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label for="volumeControl" class="text-white me-2">
+                                            <i class="bi bi-volume-up-fill"></i>
+                                        </label>
+                                        <input type="range" id="volumeControl" class="form-range" min="0" max="1" step="0.1" value="1">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Audio Element -->
+                        <audio id="audioPlayer" src="./ressources/FlawedMangoes.mp3"></audio>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+<script src="./js/script.js"></script>
+</html>
