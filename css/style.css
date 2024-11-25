@@ -1,0 +1,85 @@
+/* Couleurs de la navbar */
+.bg-brown {
+    background-color: #8B4513; /* Marron */
+    padding: 10px;
+}
+
+/* Icône des trois traits */
+.menu-icon {
+    width: 30px;
+    height: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.menu-icon .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Transformation en croix */
+.menu-icon.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-icon.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-icon.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Chocolate card styles */
+.chocolate-card {
+    position: relative;
+    width: 100%;
+    max-width: 380px;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.chocolate-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center; 
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+body {
+    background-color: #4e2d15;
+    color: white;
+}
+
+.card {
+    background-color: #6a3a1d;
+    border: none;
+}
+
+.btn-custom {
+    background-color: #4e2d15;
+    color: white;
+    border: 1px solid white;
+}
+
+.btn-custom:hover {
+    background-color: white;
+    color: #4e2d15;
+}
