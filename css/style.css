@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Chocolate';
+    src: url(../font/chocolate_10/Chocolate.otf);
+}
+
 /* Couleurs de la navbar */
 .bg-brown {
     background-color: #3E1B07; /* Marron */
@@ -12,9 +17,6 @@
     cursor: pointer;
 }
 
-#menuIcon .navbar-toggler-icon {
-    background-image: none;
-}
 
 #menuIcon span {
     height: 3px;
@@ -94,14 +96,28 @@ body {
 .audio-container img {
     border: 2px solid #fff;
 }
+.audio-container .d-flex.align-items-center.justify-content-between {
+    justify-content: center; /* Centre tous les éléments */
+    gap: 20px; /* Ajoute de l'espace entre les boutons */
+}
+
 .audio-container button {
-    min-width: 50px;
-    height: 50px;
+    min-width: 60px; /* Ajuste la largeur minimale des boutons */
+    height: 60px; /* Ajuste la hauteur */
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
+    background-color: transparent; /* Supprime toute couleur de fond */
+    border: none; /* Supprime les bordures */
+    color: white; /* Uniformise la couleur */
+    cursor: pointer;
 }
+
+.audio-container button:hover {
+    color: #d4af37; /* Ajoute une couleur dorée au survol */
+}
+
 .audio-container input[type="range"] {
     width: 100%;
 }
@@ -143,4 +159,8 @@ body {
 #volumeControl {
     margin-top: 10px;
     width: 100px; /* Largeur du slider */
+}
+
+h2, h5, h1{
+    font-family: Chocolate;
 }

@@ -4,24 +4,127 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu Chocolat</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .jumbotron {
+            position: relative;
+            overflow: hidden;
+            height: 100vh;
+        }
+
+        video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.25);
+        }
+
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            z-index: 2;
+        }
+
+        .content img {
+            width: 200px;
+        }
+
+        .content h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Styles pour l'effet de secousse S*/
+        .shake {
+            animation: shake 0.3s ease-in-out; /* Réduction de la durée de l'animation */
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translate(0, 0); }
+            25% { transform: translate(-8px, 0); } /* Moins intense pour rapidité */
+            50% { transform: translate(8px, 0); }
+            75% { transform: translate(-8px, 0); }
+        }
+
+        /* Zoom final */
+        .zoom {
+            animation: zoom 0.5s ease-out forwards; /* Réduction de la durée */
+        }
+
+        @keyframes zoom {
+            from { transform: scale(1); }
+            to { transform: scale(1.2); }
+        }
+    </style>
 </head>
 
-<header >
-    <div class="jumbotron position-relative overflow-hidden vh-100">
-        <video autoplay loop muted class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover">
-          <source src="./ressources/magni2.mp4" type="video/mp4">
-        </video>
-        <div class="overlay position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-25"></div>
-      
-        <div class="position-absolute top-50 start-50 translate-middle text-center text-white">
-          <h1 class="display-2 fw-bold">LE SALON DU CHOCOLAT</h1>
-        </div>
-</header>
-
 <body>
+    <div class="jumbotron">
+        <video autoplay loop muted>
+            <source src="./ressources/video-fond.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+        <div class="content">
+            <img id="chocoImage" src="./ressources/logo.png" alt="Logo Chocolat">
+            <h1 id="discoverBtn">DÉCOUVRIR</h1>
+        </div>
+    </div>
 
+    <script>
+        document.getElementById("discoverBtn").addEventListener("click", function () {
+            const images = [
+                "./ressources/logo-croc2.png",
+                "./ressources/logo-croc3.png",
+                "./ressources/logo-croc4.png",
+                "./ressources/logo-croc5.png",
+                "./ressources/logo-croc6.png"
+            ];
+            const chocoImage = document.getElementById("chocoImage");
+            let currentIndex = 0;
+
+            function changeImageDuringShake() {
+                if (currentIndex < images.length) {
+                    chocoImage.classList.add("shake"); // Ajout de l'effet de secousse
+                    setTimeout(() => {
+                        chocoImage.src = images[currentIndex]; // Changement de l'image au milieu de la secousse
+                        currentIndex++;
+                        setTimeout(() => {
+                            chocoImage.classList.remove("shake"); // Fin de l'effet de secousse
+                            changeImageDuringShake(); // Appel récursif pour la prochaine image
+                        }, 150); // Moment où l'image change (plus rapide)
+                    }, 150);
+                } else {
+                    // Zoom final et redirection
+                    chocoImage.classList.add("zoom");
+                    setTimeout(() => {
+                        window.location.href = "./portrait-maxime.html";
+                    }, 500); // Attente après le zoom avant la redirection
+                }
+            }
+
+            changeImageDuringShake(); // Lancer la séquence
+        });
+    </script>
 </body>
-<script src="./js/script.js"></script>
 </html>
