@@ -1,6 +1,6 @@
 /* Couleurs de la navbar */
 .bg-brown {
-    background-color: #8B4513; /* Marron */
+    background-color: #3E1B07; /* Marron */
 }
 
 #menuIcon {
@@ -40,7 +40,7 @@
 /* Chocolate card styles */
 .chocolate-card {
     position: relative;
-    width: 100%;
+    width: 80%;
     max-width: 380px;
     overflow: hidden;
     cursor: pointer;
@@ -62,17 +62,15 @@
     font-size: 26px;
     font-weight: bold;
     text-align: center; 
-    padding: 5px 10px;
-    border-radius: 3px;
 }
 
 body {
-    background-color: #4e2d15;
+    background-color: #522500;
     color: white;
 }
 
 .card {
-    background-color: #6a3a1d;
+    background-color: #864529;
     border: none;
 }
 
@@ -110,4 +108,39 @@ body {
 .audio-container select {
     color: #000;
     padding: 5px;
+}
+
+.select-no-arrow {
+    appearance: none; /* Supprime la flèche */
+    background-color: #4b2e1d; /* Couleur de fond */
+    border: 1px solid #3a1e12; /* Bordure assortie */
+    color: white; /* Texte blanc */
+    font-size: 1rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Ajout d'un symbole de style personnalisé, si nécessaire */
+.select-no-arrow::-ms-expand {
+    display: none; /* Supprime la flèche sur IE */
+}
+
+/* Cache le contrôle du volume par défaut */
+.hidden {
+    display: none;
+}
+
+/* Ajuste l'affichage lorsque visible */
+.volume-container {
+    display: inline-block;
+    position: relative;
+}
+
+.volume-icon {
+    cursor: pointer;
+}
+
+#volumeControl {
+    margin-top: 10px;
+    width: 100px; /* Largeur du slider */
 }
