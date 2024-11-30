@@ -1,15 +1,15 @@
 const menuIcon = document.getElementById('menuIcon');
-const overlay = document.getElementById('overlay');
+const overlayy = document.getElementById('overlayy');
 
 // Toggle l'overlay et l'icône
 menuIcon.addEventListener('click', () => {
     menuIcon.classList.toggle('active');
-    overlay.classList.toggle('d-none');
+    overlayy.classList.toggle('d-none');
 });
 
 // Clic sur l'overlay pour fermer
-overlay.addEventListener('click', () => {
-    overlay.classList.add('d-none');
+overlayy.addEventListener('click', () => {
+    overlayy.classList.add('d-none');
     menuIcon.classList.remove('active');
 });
 
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
             playPauseBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-pause-circle-fill" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.25 5C5.56 5 5 5.56 5 6.25v3.5a1.25 1.25 0 1 0 2.5 0v-3.5C7.5 5.56 6.94 5 6.25 5m3.5 0c-.69 0-1.25.56-1.25 1.25v3.5a1.25 1.25 0 1 0 2.5 0v-3.5C11 5.56 10.44 5 9.75 5"/></svg>';
         } else {
             audio.pause();
-            playPauseBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16"> <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393"/> </svg>';
+            playPauseBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-play-circle-fill" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z"/></svg>';
         }
     });
 

@@ -1,7 +1,13 @@
 @font-face {
-    font-family: 'Chocolate';
-    src: url(../font/chocolate_10/Chocolate.otf);
+    font-family: 'Poppins';
+    src: url(../font/Poppins/Poppins-Regular.woff);
 }
+
+@font-face {
+    font-family: 'Lilita-one';
+    src: url(../font/Lilita_One/LilitaOne-Regular.ttf);
+}
+
 
 /* Couleurs de la navbar */
 .bg-brown {
@@ -67,7 +73,7 @@
 }
 
 body {
-    background-color: #522500;
+    background-color: #2F0E07;
     color: white;
 }
 
@@ -115,8 +121,9 @@ body {
 }
 
 .audio-container button:hover {
-    color: #d4af37; /* Ajoute une couleur dorée au survol */
+    color: #2F0E07; /* Ajoute une couleur dorée au survol */
 }
+
 
 .audio-container input[type="range"] {
     width: 100%;
@@ -129,7 +136,7 @@ body {
 .select-no-arrow {
     appearance: none; /* Supprime la flèche */
     background-color: #4b2e1d; /* Couleur de fond */
-    border: 1px solid #3a1e12; /* Bordure assortie */
+    border: none; /* Bordure assortie */
     color: white; /* Texte blanc */
     font-size: 1rem;
     text-align: center;
@@ -138,7 +145,7 @@ body {
 
 /* Ajout d'un symbole de style personnalisé, si nécessaire */
 .select-no-arrow::-ms-expand {
-    display: none; /* Supprime la flèche sur IE */
+    display: none; 
 }
 
 /* Cache le contrôle du volume par défaut */
@@ -161,6 +168,10 @@ body {
     width: 100px; /* Largeur du slider */
 }
 
-h2, h5, h1{
-    font-family: Chocolate;
+h2, h5, h1, #navMenu{
+    font-family: Lilita-one;
+}
+
+p{
+    font-family: Poppins;
 }

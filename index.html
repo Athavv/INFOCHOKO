@@ -3,59 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Chocolat</title>
+    <title>Salon du Chocolat</title>
+    <!-- Lien vers Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
     <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
 
-        .jumbotron {
+
+        .hero-section {
             position: relative;
-            overflow: hidden;
             height: 100vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
         }
 
-        video {
+        /* Vidéo de fond */
+        .hero-section video {
             position: absolute;
-            top: 0;
-            left: 0;
             width: 100%;
             height: 100%;
             object-fit: cover;
+            z-index: 1;
         }
 
-        .overlay {
+        /* Overlay sombre pour rendre le texte lisible */
+        .video-overlay {
             position: absolute;
-            top: 0;
-            left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.25);
-        }
-
-        .content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            color: white;
+            background: rgba(0, 0, 0, 0.5);
             z-index: 2;
         }
 
-        .content img {
-            width: 200px;
-        }
 
-        .content h1 {
-            font-size: 3rem;
+        .hero-button {
+            background-color: #653A2A;
+            color: white;
+            padding: 15px 30px;
             font-weight: bold;
-            cursor: pointer;
+            transition: background-color 0.3s ease;
         }
 
-        /* Styles pour l'effet de secousse S*/
+        .hero-button:hover {
+            background-color: #44251a;
+        }
+
+
         .shake {
             animation: shake 0.3s ease-in-out; /* Réduction de la durée de l'animation */
         }
@@ -78,53 +72,75 @@
         }
     </style>
 </head>
-
 <body>
-    <div class="jumbotron">
-        <video autoplay loop muted>
+    <div class="hero-section">
+        <!-- Vidéo de fond -->
+        <video autoplay loop muted class="position-absolute top-0 start-0 w-100 h-100 p-4 rounded ">
             <source src="./ressources/video-fond.mp4" type="video/mp4">
         </video>
-        <div class="overlay"></div>
-        <div class="content">
-            <img id="chocoImage" src="./ressources/logo.png" alt="Logo Chocolat">
-            <h1 id="discoverBtn">DÉCOUVRIR</h1>
+        
+        <!-- Overlay sombre -->
+        <div class="video-overlay"></div>
+
+        <!-- Contenu principal -->
+        <div class="container z-3">
+            <div class="row align-items-center">
+                <!-- Colonne de gauche : texte et bouton -->
+                <div class="col-md-7 text-start">
+                    <h1 class="display-1 mb-4">BIENVENUE DANS LE SALON DU CHOCOLAT</h1>
+                    <p class="fs-5 col-md-9">
+                        Découvrez le monde merveilleux du chocolat : un mélange de saveurs, de créations artisanales et de passion. 
+                        Rejoignez-nous pour explorer des expositions uniques et rencontrer des experts du chocolat.
+                    </p>
+                    <a class="btn hero-button pill" id="discoverBtn">ENTRER DANS LE SALON <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-door-open" viewBox="0 0 16 16">
+                        <path d="M8.5 10c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1"/>
+                        <path d="M10.828.122A.5.5 0 0 1 11 .5V1h.5A1.5 1.5 0 0 1 13 2.5V15h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V1.5a.5.5 0 0 1 .43-.495l7-1a.5.5 0 0 1 .398.117M11.5 2H11v13h1V2.5a.5.5 0 0 0-.5-.5M4 1.934V15h6V1.077z"/>
+                      </svg></a>
+                </div>
+
+                <!-- Colonne de droite : image -->
+                <div class="col-md-5 text-end">
+                    <img src="./ressources/logo.png" alt="Salon du Chocolat" class="hero-image" id="chocoImage">
+                </div>
+            </div>
         </div>
     </div>
 
-    <script>
-        document.getElementById("discoverBtn").addEventListener("click", function () {
-            const images = [
-                "./ressources/logo-croc2.png",
-                "./ressources/logo-croc3.png",
-                "./ressources/logo-croc4.png",
-                "./ressources/logo-croc5.png",
-                "./ressources/logo-croc6.png"
-            ];
-            const chocoImage = document.getElementById("chocoImage");
-            let currentIndex = 0;
-
-            function changeImageDuringShake() {
-                if (currentIndex < images.length) {
-                    chocoImage.classList.add("shake"); // Ajout de l'effet de secousse
-                    setTimeout(() => {
-                        chocoImage.src = images[currentIndex]; // Changement de l'image au milieu de la secousse
-                        currentIndex++;
-                        setTimeout(() => {
-                            chocoImage.classList.remove("shake"); // Fin de l'effet de secousse
-                            changeImageDuringShake(); // Appel récursif pour la prochaine image
-                        }, 150); // Moment où l'image change (plus rapide)
-                    }, 150);
-                } else {
-                    // Zoom final et redirection
-                    chocoImage.classList.add("zoom");
-                    setTimeout(() => {
-                        window.location.href = "./portrait-maxime.html";
-                    }, 500); // Attente après le zoom avant la redirection
-                }
-            }
-
-            changeImageDuringShake(); // Lancer la séquence
-        });
-    </script>
+    <!-- Script Bootstrap -->
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.getElementById("discoverBtn").addEventListener("click", function () {
+        const images = [
+            "./ressources/logo-croc2.png",
+            "./ressources/logo-croc3.png",
+            "./ressources/logo-croc4.png",
+            "./ressources/logo-croc5.png",
+            "./ressources/logo-croc6.png"
+        ];
+        const chocoImage = document.getElementById("chocoImage");
+        let currentIndex = 0;
+
+        function changeImageDuringShake() {
+            if (currentIndex < images.length) {
+                chocoImage.classList.add("shake");
+                setTimeout(() => {
+                    chocoImage.src = images[currentIndex];
+                    currentIndex++;
+                    setTimeout(() => {
+                        chocoImage.classList.remove("shake");
+                        changeImageDuringShake();
+                    }, 150);
+                }, 150);
+            } else {
+                chocoImage.classList.add("zoom");
+                setTimeout(() => {
+                    window.location.href = "./portrait-maxime.html";
+                }, 500);
+            }
+        }
+
+        changeImageDuringShake();
+    });
+</script>
 </html>

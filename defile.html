@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Défilé de mode</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/defile.css" rel="stylesheet">
+    <style>
+      body{
+      background-color: #774936;
+      } 
+   </style>
+</head>
+
+<header>
+  <nav class="navbar mt-2 px-2 p-3">
+      <div class="container-fluid d-flex justify-content-end">
+          <div class="menu-icon z-3" id="menuIcon">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+          </div>
+      </div>
+  </nav>
+
+  <div id="overlayy"
+      class="d-none position-fixed top-0 start-0 w-100 h-100 bg-dark bg-opacity-75 d-flex justify-content-center align-items-center z-2">
+      <div class="container text-center">
+          <div class="row g-3">
+              <div class="col-6">
+                  <div class="chocolate-card">
+                      <a href="./faire-du-chocolat.html">
+                          <img src="./ressources/carre-chocolat.png" alt="Chocolat" class="img-fluid">
+                          <div class="overlay-text" id="navMenu">IMMERSION AU SALON DU CHOCOLAT</div>
+                      </a>
+                  </div>
+              </div>
+              <div class="col-6">
+                <div class="chocolate-card">
+                    <a href="./portrait-maxime.html">
+                        <img src="./ressources/carre-chocolat.png" alt="Chocolat" class="img-fluid">
+                        <div class="overlay-text" id="navMenu">PORTRAIT D'UN CHOCOLATIER</div>
+                    </a>
+                </div>
+            </div>
+            
+               <!-- Image centrale avec crédit -->
+               <div class="col-12 d-flex flex-column align-items-center">
+                <div class="position-absolute top-50 start-50 translate-middle">
+                    <a href="./credit.html">
+                    <img src="./ressources/carre-chocolat.png" alt="Crédit" class="img-fluid w-25">
+                    <p class="text-white mt-2 position-absolute top-50 start-50 translate-middle "  id="navMenu">CRÉDIT</p>
+                    </a>
+                </div>
+            </div>
+
+              <div class="col-6">
+                  <div class="chocolate-card">
+                      <a href="./defile.html">
+                          <img src="./ressources/carre-chocolat.png" alt="Chocolat" class="img-fluid">
+                          <div class="overlay-text top-50" id="navMenu">LE DÉFILÉ DE MODE</div>
+                      </a>
+                  </div>
+              </div>
+              <div class="col-6">
+                <div class="chocolate-card">
+                    <a href="./faire-du-chocolat.html">
+                        <img src="./ressources/carre-chocolat.png" alt="Chocolat" class="img-fluid">
+                        <div class="overlay-text" id="navMenu">COMMENT FAIRE DU CHOCOLAT ?</div>
+                    </a>
+                </div>
+            </div>
+          </div>
+      </div>
+  </div>
+</header>
+<body>
+  <div class="container" > <!--w-50 position-static row align-self-start-->
+    <div class="row g-4">
+      <div class="col-md-6">
+    <h1 class="mt-3 display-4">L'HISTOIRE DU DÉFILÉ <BR>DE MODE</h1>
+    <p class="un mt-3">
+      Le défilé du Salon du Chocolat est devenu l’un des événements les plus attendus de Paris. 
+      Chaque année, ce défilé de mode mélange l’art, la haute couture et la gourmandise en un événement où des créations aussi audacieuses sont parfois entièrement réalisées en chocolat.
+    </p>
+  </div>
+  <div class="col-md-6 mx-auto">  
+    <div class="carousel-container">
+      <div class="carousel-track">
+          <div class="carousel-slide active">
+              <img src="./ressources/robe-1.jpg" alt="Photo de robe 1">
+          </div>
+          <div class="carousel-slide">
+              <img src="./ressources/robe-2.jpg" alt="Photo de robe 2">
+          </div>
+          <div class="carousel-slide">
+              <img src="./ressources/robe-3.jpg" alt="Photo de robe 3">
+          </div>
+          <div class="carousel-slide">
+              <img src="./ressources/robe-4.jpg" alt="Photo de robe 4">
+          </div>
+      </div>
+      <button class="carousel-btn prev">❮</button>
+      <button class="carousel-btn next">❯</button>
+      <div class="carousel-indicators z-1">
+          <span class="indicator active"></span>
+          <span class="indicator"></span>
+          <span class="indicator"></span>
+          <span class="indicator"></span>
+        </div>
+  </div>
+  </div>
+  </div>
+  </div>
+
+
+
+<div class="container text-section ">
+  <div class="row">
+      <div class="col-md-6">
+          <img src="./ressources/Fondateur.png" class="img-fluid " width="450px" height="282px" >
+      </div>
+      <div class="col-md-5">
+          <h2 >L'Histoire du Défilé de Mode</h2>
+          <p>
+              En 1995 le défilé de  mode est né au Salon du Chocolat, un an après le lancement de cet événement, créé par Sylvie Douce et François Jeantet. Leur ambition était d’offrir au public une expérience inédite en présentant des créations de mode en chocolat. Le concept suscite de l'excitation, mais pose aussi de nombreux défis techniques. Car faire défiler des mannequins habillé en chocolat nécessite un équilibre parfait entre audace artistique et précision technique, deux mondes qui, a priori, semblaient très éloignés.
+            </p>
+      </div>
+  </div>
+</div>
+<div class="container content-section">
+  <div class="row">
+      <div class="col-md-6">
+          <h2 class="title-section">L'Histoire du Défilé de Mode</h2>
+          <p>
+              Les premiers défilés étaient de petite ampleur, en montrant des créations simples mais créatives.Petit à petit, les stylistes et chocolatiers ont affiné leurs techniques, jouant avec la texture, la brillance et la résistance du chocolat pour concevoir des pièces de plus en plus complexes. Les premières tenues fusionnent du chocolat brut et des tissus , mais très vite, les créateurs se sont lancés dans des créations de plus en plus composées entièrement de chocolat.
+            </p>
+            <p>
+              Aujourd’hui, le défilé du Salon du Chocolat est devenu une véritable institution. Il attire les plus grands noms de la mode et du chocolat, mais aussi un public de plus en plus large. Chaque année, de nouvelles tendances et collaborations naissent et enrichissent cet événement avec des idées encore plus audacieuses. Ce défilé n’est plus seulement un spectacle, mais une véritable expérience pour la science où l'on repousse les frontières entre la mode et la gastronomie.Le défilé du Salon du Chocolat est également une occasion unique de célébrer le chocolat sous toutes ses formes, rappelant que ce produit tant apprécié peut être bien plus qu’une simple gourmandise.
+            </p>
+          </div>
+      <div class="col-md-6">
+        <img src="./ressources/foulesalon.jpg" class="img-fluid rounded" >
+    </div>
+    </div>
+</div>
+      
+<div class="container text-section">
+  <p class="text-center">
+      Chaque année le défilé a un thème en particulier cette année le thème était “Le chocolat au fil du temps” en célébration des presque 30 ans de cet événement.
+    </p>
+  
+    <div class="text-center">
+    <div class="image-container">
+      <img src="./ressources/Background.jpeg"  class="img-sombre rounded" alt="Image" width="1000px;"height= "500px;">
+    <a href="./defile-video.html" class="btn btn-view" id="scrollButton">VOIR LE DEFILÉ</a>
+  </div>
+  </div>
+</div>
+<script src="./js/defile.js"></script>
+<script src="./js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
