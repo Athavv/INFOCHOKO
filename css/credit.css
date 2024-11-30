@@ -1,0 +1,61 @@
+p{
+    color: white;
+}
+body {
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+header {
+    color: #fff;
+    text-align: center;
+}
+h1 {
+    margin: 0;
+}
+.content {
+    padding: 20px;
+}
+.section {
+    margin-bottom: 30px;
+}
+.section h2 {
+    font-size: 1.5em;
+    color: white;
+    border-bottom: 2px solid white;
+    padding-bottom: 5px;
+}
+.credits-list {
+    list-style: none;
+    padding: 0;
+}
+.credits-list li {
+    font-size: 1.1em;
+    margin: 5px 0;
+    color: white;
+}
+.text-section {
+background-color: #653A2A; 
+padding: 50px;
+border-radius: 10px;
+}
+.titre{
+
+color: white;
+text-align: center;
+}  
+h3{
+color:white;
+} 
+.img-center {
+text-align: center; 
+margin-bottom: 50px; 
+display: inline-block; 
+padding: 10px; 
+background-color: #653A2A; 
+border: 2px solid white; 
+
+}
+.container-deux{
+text-align: center; 
+}

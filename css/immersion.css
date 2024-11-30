@@ -1,0 +1,80 @@
+body {
+    color: white;
+}
+
+.par1,
+.par2,
+.par4,
+.par5 {
+    background-color: #653A2A;
+}
+
+.par2,
+.par4,
+.par5 {
+    background-color: #411D13;
+}
+
+.premier {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.deuxieme {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.troisieme,
+.carre {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.text-container3 {
+    background-color: #653A2A;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+/* Conteneur vidéo */
+.video-background {
+    position: relative;
+    overflow: hidden;
+}
+
+.video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1; /* Met la vidéo en arrière-plan */
+}
+
+/* Overlay sombre */
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Filtre noir semi-transparent */
+    z-index: 2; /* Overlay entre la vidéo et le contenu */
+}
+
+/* Card */
+.text-container-card {
+    background-color: #653A2A;
+    color: white;
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 800px; /* Limite la largeur */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+header{
+    background-color: #653A2A ;
+}
