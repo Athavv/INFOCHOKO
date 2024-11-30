@@ -1,0 +1,60 @@
+.hero-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Vidéo de fond */
+.hero-section video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* Overlay sombre pour rendre le texte lisible */
+.video-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+
+.hero-button {
+    background-color: #653A2A;
+    color: white;
+    padding: 15px 30px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: #44251a;
+}
+
+
+.shake {
+    animation: shake 0.3s ease-in-out; /* Réduction de la durée de l'animation */
+}
+
+@keyframes shake {
+    0%, 100% { transform: translate(0, 0); }
+    25% { transform: translate(-8px, 0); } /* Moins intense pour rapidité */
+    50% { transform: translate(8px, 0); }
+    75% { transform: translate(-8px, 0); }
+}
+
+/* Zoom final */
+.zoom {
+    animation: zoom 0.5s ease-out forwards; /* Réduction de la durée */
+}
+
+@keyframes zoom {
+    from { transform: scale(1); }
+    to { transform: scale(1.2); }
+}
