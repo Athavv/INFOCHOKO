@@ -1,124 +1,124 @@
 .text-section {
-    background-color: #653A2A; 
-    padding: 50px;
-    border-radius: 10px;
-  }
-  
-  .carousel-container {
-    position: relative;
-    top: 10px;
-    overflow: hidden;
-    left: 25px;
-  }
-  .carousel-track {
-              display: flex;
-              transition: transform 0.5s ease-in-out;
-              
-            }
-          .carousel-slide {
-              flex: 0 0 30%;
-              margin: 0 15px;
-              opacity: 0.5;
-              transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-              
-            }
-          .carousel-slide.active {
-              opacity: 1;
-              transform: scale(1.1);
+  background-color: #653A2A; 
+  padding: 50px;
+  border-radius: 10px;
+}
+
+.carousel-container {
+  position: relative;
+  top: 10px;
+  overflow: hidden;
+  left: 25px;
+}
+.carousel-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            
           }
-          .carousel-slide img {
-              width: 100%;
-              border-radius: 10px;
-              object-fit: cover;
+        .carousel-slide {
+            flex: 0 0 30%;
+            margin: 0 15px;
+            opacity: 0.5;
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+            
           }
-          .carousel-btn {
-              position: absolute;
-              top: 50%;
-              transform: translateY(-50%);
-              background-color: rgba(0, 0, 0, 0.5);
-              color: white;
-              border: none;
-              padding: 10px;
-              cursor: pointer;
-          }
-          .carousel-btn.prev {
-              left: 10px;
-          }
-          .carousel-btn.next {
-              right: 10px;
-          }
-  
-          .carousel-indicators {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      position: absolute; 
-    }
-  
-  .indicator {
-      top: 100px;
-      width: 13px;
-      height: 13px;
-      background-color: #5c3c2a;
-      border-radius: 50%;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-  }
-  
-  .indicator.active {
-      background-color: #301f13;}
-  
-    .carousel-btn.prev,.carousel-btn.next {
-    top: 90%; 
-  }
-  .carousel-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-    border-radius: 10px; 
-  }
-  
-  
-  #scrollButton {
-              background-color:rgb(255, 255, 255, 0.6);
-              border: none;
-              color: #2F0E07;
-              font-weight: bold;
-              padding: 10px 30px;
-              border-radius: 20px;
-              transition: background-color 0.3s ease;
-          }
-  
-          #scrollButton:hover {
-              background-color: #ffffff;
-          }
-  
-  .image-container .btn-view {
+        .carousel-slide.active {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+        .carousel-slide img {
+            width: 100%;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .carousel-btn.prev {
+            left: 10px;
+        }
+        .carousel-btn.next {
+            right: 10px;
+        }
+
+        .carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
     position: absolute; 
-    left: 50%;
-    bottom: -122%;
-    background-color: rgba(255, 255, 255, 0.5); /* Fond semi-transparent */
-    color: white;
-    border: none;
-    padding: 15px 25px;
-    border-radius: 5px;
-    font-size: 16px;
+  }
+
+.indicator {
+    top: 100px;
+    width: 13px;
+    height: 13px;
+    background-color: #5c3c2a;
+    border-radius: 50%;
     cursor: pointer;
-    text-decoration: none;
-    position: absolute;
-    z-index: 2; /* Au-dessus de la couche sombre */
-    transform: translateX(-50%);
-  }
-  .image-container .overlay {
-    position: absolute;
-    right: 210px;
-    width: 1002px;
-    height: 500px;
-    background: rgba(0, 0, 0, 0.5); /* Couche sombre semi-transparente */
-    border-radius: 10px;
-    z-index: 1;
-  }
-  .container {
-    margin-bottom: 50px; 
-  }
-     
+    transition: background-color 0.3s ease;
+}
+
+.indicator.active {
+    background-color: #301f13;}
+
+  .carousel-btn.prev,.carousel-btn.next {
+  top: 90%; 
+}
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  border-radius: 10px; 
+}
+
+
+#scrollButton {
+            background-color:rgb(255, 255, 255, 0.6);
+            border: none;
+            color: #2F0E07;
+            font-weight: bold;
+            padding: 10px 30px;
+            border-radius: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        #scrollButton:hover {
+            background-color: #ffffff;
+        }
+
+.image-container .btn-view {
+  position: absolute; 
+  left: 50%;
+  bottom: -122%;
+  background-color: rgba(255, 255, 255, 0.5); /* Fond semi-transparent */
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  position: absolute;
+  z-index: 2; /* Au-dessus de la couche sombre */
+  transform: translateX(-50%);
+}
+.image-container .overlay {
+  position: absolute;
+  right: 210px;
+  width: 1002px;
+  height: 500px;
+  background: rgba(0, 0, 0, 0.5); /* Couche sombre semi-transparente */
+  border-radius: 10px;
+  z-index: 1;
+}
+.container {
+  margin-bottom: 50px; 
+}
+   
