@@ -93,4 +93,3 @@ document.addEventListener("DOMContentLoaded", () => {
         return `${minutes}:${seconds}`;
     }
 });
-

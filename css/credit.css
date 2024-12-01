@@ -59,3 +59,11 @@ border: 2px solid white;
 .container-deux{
 text-align: center; 
 }
+
+a{
+    text-decoration-color: #653A2A;
+}
+
+li{
+    text-align: justify;
+}
