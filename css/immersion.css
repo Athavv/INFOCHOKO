@@ -16,9 +16,8 @@ body {
 }
 
 .premier {
-    height: 300px;
-    width: 100%;
-    object-fit: cover;
+    height: 70%;
+    width: 200%;
 }
 
 .deuxieme {
@@ -62,7 +61,6 @@ body {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5); /* Filtre noir semi-transparent */
-    z-index: 2; /* Overlay entre la vidéo et le contenu */
 }
 
 /* Card */
@@ -77,4 +75,8 @@ body {
 
 header{
     background-color: #653A2A ;
+}
+
+.z-4{
+    z-index: 500;
 }

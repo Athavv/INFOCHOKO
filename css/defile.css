@@ -93,32 +93,44 @@
             background-color: #ffffff;
         }
 
-.image-container .btn-view {
-  position: absolute; 
-  left: 50%;
-  bottom: -122%;
-  background-color: rgba(255, 255, 255, 0.5); /* Fond semi-transparent */
-  color: white;
-  border: none;
-  padding: 15px 25px;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  text-decoration: none;
-  position: absolute;
-  z-index: 2; /* Au-dessus de la couche sombre */
-  transform: translateX(-50%);
+.image-container {
+  position: relative;
+  display: inline-block;
 }
-.image-container .overlay {
+
+.video-overlay {
   position: absolute;
-  right: 210px;
-  width: 1002px;
-  height: 500px;
-  background: rgba(0, 0, 0, 0.5); /* Couche sombre semi-transparente */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fond noir semi-transparent */
+  z-index: 1; /* Met le filtre au-dessus de l'image */
   border-radius: 10px;
-  z-index: 1;
 }
-.container {
-  margin-bottom: 50px; 
+
+.image-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
-   
+
+.image-container .btn-view {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.7); /* Fond semi-transparent */
+  color: #2F0E07;
+  font-weight: bold;
+  padding: 10px 30px;
+  border-radius: 20px;
+  text-decoration: none;
+  z-index: 2; /* Au-dessus du filtre sombre */
+  transition: background-color 0.3s ease;
+}
+
+.image-container .btn-view:hover {
+  background-color: #ffffff;
+}
